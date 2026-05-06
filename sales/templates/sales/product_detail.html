@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ព័ត៌មានលម្អិត - {{ product.name }}</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 500px; }
+        .price { color: green; font-size: 1.5em; font-weight: bold; }
+        .back-btn { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>{{ product.name }}</h1>
+        <hr>
+        <p><strong>ប្រភេទ៖</strong> {{ product.category }}</p>
+        <p><strong>ការពិពណ៌នា៖</strong> {{ product.description }}</p>
+        <p class="price">តម្លៃ៖ ${{ product.price }}</p>
+        
+        <a href="{% url 'products_list' %}" class="back-btn">← Back Now </a>
+    </div>
+
+</body>
+</html>
